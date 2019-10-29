@@ -1,6 +1,6 @@
 <template>
   <div class="rate">
-    <div :style="`width: ${value * 100}%`">{{ value }}</div>
+    <div :style="`width: ${value * 100}%`">{{ 100 * value }}%</div>
   </div>
 </template>
 
