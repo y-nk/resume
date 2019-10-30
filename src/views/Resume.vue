@@ -193,10 +193,11 @@ export default {
 @media screen and (min-width: 768px), print {
   .resume {
     display: grid;
-    grid-template-areas: "header header" "experiences about" "experiences skillsets";
+    grid-template-areas: "header header" "experiences about" "experiences skillsets" "experiences null";
     grid-template-columns: auto minmax(min-content, 33%);
-    grid-template-rows: min-content max-content auto;
+    grid-template-rows: min-content min-content min-content auto;
     grid-gap: 0 1.5em;
+    align-content: start;
   }
 
   .resume .about {
