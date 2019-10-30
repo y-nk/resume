@@ -41,7 +41,7 @@ export default {
     },
 
     strong() {
-      const colors = ['#f8004f', '#5000e9', '#00e9c6', '#00b205', '#edbe00', '#f82d00']
+      const colors = ['#f8004f', '#5000e9', '#00e9c6', '#00b205', '#f82d00']
       return colors[(Math.random() * colors.length) | 0]
     },
 
