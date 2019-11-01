@@ -5,7 +5,9 @@
     <y-section class="experiences" :title="$t('labels.experiences')">
       <ol>
         <li :key="i" v-for="(experience, i) in $t('experiences')">
-          <y-experience v-bind="experience" />
+          <y-experience v-bind="experience"
+            :toggle="active === i"
+            @click="active = active !== i ? i : -1" />
         </li>
       </ol>
     </y-section>
@@ -46,7 +48,11 @@ export default {
     },
 
     about() { return marked(this.$t('about')) }
-  }
+  },
+
+  data: () => ({
+    active: -1
+  }),
 }
 </script>
 

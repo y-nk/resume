@@ -1,5 +1,5 @@
 <template>
-  <article class="experience" @click="toggle = !toggle">
+  <article class="experience" v-on="$listeners">
     <hgroup>
       <h3>{{ title }}</h3>
       <h5><a :href="website" target="_blank">{{ company }}</a></h5>
@@ -34,12 +34,11 @@ import marked from 'marked'
 import { format } from 'date-fns'
 
 export default {
-  props: ['title', 'from', 'to', 'company', 'website', 'summary', 'highlight'],
+  props: ['title', 'from', 'to', 'company', 'website', 'summary', 'highlight', 'toggle'],
 
   data: () => ({
     marked,
     format,
-    toggle: false,
   })
 }
 </script>
