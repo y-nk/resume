@@ -2,7 +2,7 @@
   <header>
     <hgroup>
       <h1>{{ $t('name') }} <y-logo /></h1>
-      <h2>{{ $t('job') }}</h2>
+      <h2>{{ baseline }}</h2>
     </hgroup>
 
     <ul>
@@ -23,6 +23,13 @@ import YLogo from '@/components/Logo'
 
 export default {
   components: { YLogo },
+  
+  computed: {
+    baseline() {
+      return this.$route.query.baseline
+        || this.$t('job')
+    },
+  },
 }
 </script>
 
