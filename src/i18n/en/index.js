@@ -47,8 +47,8 @@ export default {
   situation: '{0}yo, currently in {1}',
 
   contact: [{
-    href: '+33 665 105 928',
-    text: 'tel:+33665105928',
+    href: 'tel:+8108013618364',
+    text: '+81 080 1361 8364',
   }, {
     href: 'mailto:barbay.julien+resume@gmail.com',
     text: 'barbay.julien@gmail.com',
