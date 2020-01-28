@@ -2,7 +2,11 @@
   <article class="experience" v-on="$listeners">
     <hgroup>
       <h3>{{ title }}</h3>
-      <h5><a :href="website" target="_blank">{{ company }}</a></h5>
+      <h5>
+        <a class="company" :href="website" target="_blank">{{ company }}</a>
+
+        (<a class="location" :href="`https://www.google.com/maps/search/${city}`" target="_blank">{{ location }}</a>)
+        </h5>
     </hgroup>
 
     <section v-show="toggle">
@@ -34,12 +38,18 @@ import marked from 'marked'
 import { format } from 'date-fns'
 
 export default {
-  props: ['title', 'from', 'to', 'company', 'website', 'summary', 'highlight', 'toggle'],
+  props: ['title', 'from', 'to', 'location', 'company', 'website', 'summary', 'highlight', 'toggle'],
 
   data: () => ({
     marked,
     format,
-  })
+  }),
+
+  computed: {
+    city() {
+      return this.location.split(', ')[0]
+    },
+  },
 }
 </script>
 
@@ -93,20 +103,24 @@ export default {
   font-weight: normal;
 }
 
-.experience a {
+.experience .company {
   position: relative;
   color: inherit;
   text-decoration: none;
 }
 
-.experience a:before {
+.experience .company:before {
   content: '–';
   color: inherit;
   margin: 0 .25em;
 }
 
-.experience a:after {
+.experience .company:after {
   left: .9em;
+}
+
+.experience .location {
+  font-size: .9em;
 }
 
 .experience h6 {
@@ -118,6 +132,10 @@ export default {
 
 .experience time + time:before {
   content: ' – ';
+}
+
+.experience time + a:before {
+  content: ' in ';
 }
 
 .experience dl {

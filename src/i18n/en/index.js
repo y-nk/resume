@@ -85,6 +85,7 @@ At work, _my first motivation is dealing with the impossible_. Technical challen
     website: 'https://linecorp.com/',
     from: new Date('2018-03-01'),
     to: null,
+    location: 'Kyoto, Japan',
 
     summary: `At LINE, I've started, defined and implemented a production ready Design System on my own and nurtured it until it finally took off company wide ; it is now spread all around and the whole group is taking steps towards it. While doing it, I've been part of the developer's platform refactoring project, involving in taking over legacy code, analyzing it and building a new version from scratch in Vue.js.`
   }, {
@@ -93,6 +94,7 @@ At work, _my first motivation is dealing with the impossible_. Technical challen
     website: 'https://technicolor.com/',
     from: new Date('2015-03-01'),
     to: new Date('2018-02-28'),
+    location: 'Paris, France',
 
     summary: `I'm the technical advisor for the VP of UX in Technicolor. We design products and solutions for the Internet of Thing. My daily goals are to provide prototypes, test UIs, advise designers and challenge their ideas ; find, audit and benchmark solutions, softwares and companies that could bring our concepts to production.`,
 
@@ -103,6 +105,7 @@ At work, _my first motivation is dealing with the impossible_. Technical challen
     website: 'https://krds.com/',
     from: new Date('2013-06-01'),
     to: new Date('2015-01-01'),
+    location: 'Chennai, India',
 
     summary: `I'm in charge of developing and managing Flash and JS parts of web applications related to our core target (Facebook apps). I'm also the frontend consultant of the team ; I also write technical documentations and business recommandations.`,
 
@@ -113,6 +116,7 @@ At work, _my first motivation is dealing with the impossible_. Technical challen
     website: 'https://rappfrance.com/',
     from: new Date('2010-12-01'),
     to: new Date('2013-05-01'),
+    location: 'Paris, France',
 
     summary: `I'm the frontend developer of the agency, using whatever stack needed to display content on the web. I also consult with with server-side developers, actively coding in php or C#. I'm also the preferred frontend consultant for creatives of the agency, project managers or business developers.`,
 
@@ -123,6 +127,7 @@ At work, _my first motivation is dealing with the impossible_. Technical challen
     website: 'https://bigyouth.fr/',
     from: new Date('2009-09-01'),
     to: new Date('2010-12-01'),
+    location: 'Paris, France',
 
     summary: `I'm working on full-flash websites with multilingual, deeplinking and amfphp (server-side) web services. I'm in the curation group of the team and help by reviewing frameworks and technical solutions for our daily challenges related to flash.`,
 
@@ -133,6 +138,7 @@ At work, _my first motivation is dealing with the impossible_. Technical challen
     website: 'https://axance.fr/',
     from: new Date('2007-08-01'),
     to: new Date('2009-09-01'),
+    location: 'Paris, France',
 
     summary: `I'm working along with a project manager in user centric design refactorings. We design personas, usecases, sitemaps, wireframes, and user tests. I'm also developing prototypes for A/B user tests.`,
 
