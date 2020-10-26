@@ -80,11 +80,20 @@ At work, _my first motivation is dealing with the impossible_. Technical challen
 **I'm always looking for the unknown thing that will keep me awake late at night, for the need to master it. That's what taught me so much so far, that's what will keep me up to date in 10 years.**`,
 
   experiences: [{
+    title: 'Senior Web Engineer',
+    company: 'Amity',
+    website: 'https://amity.co/',
+    from: new Date('2020-06-01'),
+    to: null,
+    location: 'Bangkok, Thailand',
+
+    summary: `I'm in charge of the Web SDK for our developers product named Upstra, and leading a small team of developers building a component library called Ui-Kit to supports faster building of Upstra features. I'm also involved in software and platform architecture councils and decision making towards a more performant platform.`
+  }, {
     title: 'Senior Frontend Engineer',
     company: 'LINE',
     website: 'https://linecorp.com/',
     from: new Date('2018-03-01'),
-    to: null,
+    to: new Date('2020-04-15'),
     location: 'Kyoto, Japan',
 
     summary: `At LINE, I've started, defined and implemented a production ready Design System on my own and nurtured it until it finally took off company wide ; it is now spread all around and the whole group is taking steps towards it. While doing it, I've been part of the developer's platform refactoring project, involving in taking over legacy code, analyzing it and building a new version from scratch in Vue.js.`
