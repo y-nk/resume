@@ -92,4 +92,10 @@ header h2 {
     flex: 0 0 auto;
   }
 }
+
+@media (min-width: 768px) {
+  header {
+    margin-bottom: 0;
+  }
+}
 </style>
