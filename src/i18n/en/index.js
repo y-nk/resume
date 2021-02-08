@@ -87,7 +87,7 @@ At work, _my first motivation is dealing with the impossible_. Technical challen
     to: null,
     location: 'Bangkok, Thailand',
 
-    summary: `I'm in charge of the Web SDK for our developers product named Upstra, and leading a small team of developers building a component library called Ui-Kit to supports faster building of Upstra features. I'm also involved in software and platform architecture councils and decision making towards a more performant platform.`
+    summary: `I'm in charge of the web sdk of "Amity Social Cloud" product, as well as a library of React components which pair with it and 3 websites to help managing our product line. For this I'm actively coding and also overseeing a growing team of remote web engineers. On the side I'm also proactively helping im designing new features (from user requirement to software architecture), and also improving our server side and platform architectures to keep up with the scale relative to our growth.`
   }, {
     title: 'Senior Frontend Engineer',
     company: 'LINE',
@@ -181,6 +181,7 @@ At work, _my first motivation is dealing with the impossible_. Technical challen
       automation: .75,
       adobe: .75,
       sketch: .5,
+      figma: .75,
     },
   },
 }
