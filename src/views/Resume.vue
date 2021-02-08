@@ -186,7 +186,8 @@ export default {
 @media print {
   .resume {
     width: 100%;
-    font-size: 12px;
+    font-size: 11px;
+    padding: 1.75em 1.5em 1.5em;
   }
 }
 
