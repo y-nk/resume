@@ -81,6 +81,7 @@ header h2 {
 @media (min-width: 768px), print {
   header {
     display: flex;
+    margin-bottom: 0;
     padding: 1.5em;
   }
 
@@ -90,12 +91,6 @@ header h2 {
 
   header ul {
     flex: 0 0 auto;
-  }
-}
-
-@media (min-width: 768px) {
-  header {
-    margin-bottom: 0;
   }
 }
 </style>
