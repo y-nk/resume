@@ -55,7 +55,7 @@ header:hover .logo {
 }
 
 header ul {
-  margin: 0 calc(2em / .8) 0 0;
+  margin: 0 calc(1em / .8) 0 0;
   padding: 0;
   list-style: none;
   color: var(--emphasis);
