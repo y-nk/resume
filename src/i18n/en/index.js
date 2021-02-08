@@ -32,6 +32,7 @@ export default {
     automation: 'Automation',
     adobe: 'Adobe CC',
     sketch: 'Sketch',
+    figma: 'Figma',
   },
 
   name: 'Julien Barbay',
