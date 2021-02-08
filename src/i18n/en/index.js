@@ -40,18 +40,18 @@ export default {
   birth: '466617900000',
 
   location: {
-    city: 'Kyoto, Japan',
-    href: 'https://goo.gl/maps/zXMUZisgwdKpXamK6',
+    city: 'Bangkok, Thailand',
+    href: 'https://maps.app.goo.gl/FefycsDeMVdyAu5x6',
   },
 
   situation: '{0}yo, currently in {1}',
 
   contact: [{
-    href: 'tel:+8108013618364',
-    text: '+81 080 1361 8364',
+    href: 'tel:+660957321060',
+    text: '+66 957 321 060',
   }, {
-    href: 'mailto:barbay.julien+resume@gmail.com',
-    text: 'barbay.julien@gmail.com',
+    href: 'mailto:julien.barbay+resume@gmail.com',
+    text: 'julien.barbay@gmail.com',
   }, {
     href: 'https://www.linkedin.com/in/barbayjulien/',
     text: 'in.com/barbay.julien',
