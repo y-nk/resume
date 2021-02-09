@@ -1,5 +1,5 @@
 <template>
-  <div class="resume" :style="`--primary: ${primary}; --strong: ${strong}`">
+  <div class="resume" :style="theme">
     <y-header />
 
     <y-section class="experiences" :title="$t('labels.experiences')">
@@ -37,6 +37,10 @@ export default {
   },
 
   computed: {
+    darkmode() {
+      return window?.matchMedia?('(prefers-color-scheme: dark)').matches
+    },
+  
     primary() {
       const colors = ['#000000', '#1f1234']
       return colors[(Math.random() * colors.length) | 0]
@@ -45,6 +49,12 @@ export default {
     strong() {
       const colors = ['#f8004f', '#5000e9', '#00e9c6', '#00b205', '#f82d00']
       return colors[(Math.random() * colors.length) | 0]
+    },
+    
+    theme() {
+      return !this.darkmode
+        ? `--primary: ${this.primary}; --strong: ${this.strong}`
+        : ''
     },
 
     about() { return marked(this.$t('about')) }
