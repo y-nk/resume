@@ -160,23 +160,9 @@ export default {
 }
 
 @media only print {
-  .experience .highlight {
-    display: inline;
-    font-weight: bold;
-  }
-
-  .experience .highlight:before {
-    content: '';
-    display: block;
-    height: 1em;
-  }
-
-  .experience .highlight:after {
-    content: ' – ';
-  }
-
-  .experience dd {
-    display: inline;
+  .experience .highlight,
+  .experience .highlight + dd {
+    display: none !important;
   }
 }
 </style>
