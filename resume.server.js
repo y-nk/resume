@@ -21,7 +21,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_Logo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/components/Logo */ \"./src/components/Logo.vue\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  components: {\n    YLogo: _components_Logo__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n  },\n  computed: {\n    baseline: function baseline() {\n      return this.$route.query.baseline || this.$t('job');\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/components/Header.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_Logo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/components/Logo */ \"./src/components/Logo.vue\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  components: {\n    YLogo: _components_Logo__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n  },\n  computed: {\n    baseline: function baseline() {\n      return this.$route.query.job || this.$t('job');\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/components/Header.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
