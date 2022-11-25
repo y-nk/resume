@@ -23,10 +23,10 @@ import YLogo from '@/components/Logo'
 
 export default {
   components: { YLogo },
-  
+
   computed: {
     baseline() {
-      return this.$route.query.baseline
+      return this.$route.query.job
         || this.$t('job')
     },
   },
