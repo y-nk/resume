@@ -4,17 +4,26 @@ import { cap, t } from '~/i18n/labels';
 import Section from '~/components/Section.astro'
 
 const languages = {
-  english: 'Bilingual',
-  french: 'Native',
-  japanese: 'JLPT-N4',
+  english: {
+    level: 'Bilingual',
+    locale: 'en',
+  },
+  french: {
+    level: 'Native',
+    locale: 'fr',
+  },
+  japanese: {
+    level: 'JLPT-N4',
+    locale: 'jp',
+  },
 }
 ---
 
 <Section class="languages" title={t('languages')}>
   <dl>
-    {Object.entries(languages).map(([text, level]) => (
+    {Object.entries(languages).map(([text, { level, locale }]) => (
       <>
-        <dt title={cap(text)}>{t(text)}</dt>
+        <dt lang={locale} title={cap(text)}>{t(text)}</dt>
         <dd>{level}</dd>
       </>
     ))}
@@ -60,5 +69,9 @@ const languages = {
     padding: 0 .25em;
     overflow: hidden;
     color: var(--light);
+  }
+
+  .languages dd {
+    white-space: nowrap;
   }
 </style>
