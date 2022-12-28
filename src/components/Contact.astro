@@ -1,0 +1,70 @@
+---
+import { t } from '~/i18n/labels'
+
+import Section from '~/components/Section.astro'
+
+const birth = new Date('1984-10-14')
+
+const location = {
+  city: 'Bangkok, Thailand',
+  href: 'https://maps.app.goo.gl/FefycsDeMVdyAu5x6',
+}
+
+const contact = [
+  {
+    href: 'tel:+660957321060',
+    text: '+66 957 321 060',
+  },
+  {
+    href: 'mailto:julien.barbay+resume@gmail.com',
+    text: 'julien.barbay@gmail.com',
+  },
+  {
+    href: 'https://www.linkedin.com/in/barbayjulien/',
+    text: 'in.com/barbay.julien',
+  },
+]
+
+const currentAge = new Date().getFullYear() - birth.getFullYear()
+---
+<Section class="contact" title={t('contact')}>
+  <ul>
+    <li>
+      {currentAge}{t('years_old')}, {t('living')} <a href={location.href}>{location.city}</a>
+    </li>
+
+    {contact.map(({ href, text }) => (
+      <li>
+        <a href={href} target="_blank">{text}</a>
+      </li>
+    ))}
+  </ul>
+</Section>
+
+<style>
+  .contact {
+    grid-area: infos;
+    padding: 0 1.5em 1.5em;
+    color: var(--emphasis);
+    font-size: .8em;
+    font-family: sans-serif;
+    line-height: 1.6;
+  }
+
+  .contact ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contact  ul a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: 768px), print {
+    .contact {
+      padding: 2em 1em 4em;
+    }
+  }
+</style>

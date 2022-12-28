@@ -1,0 +1,74 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  keywords?: string[];
+}
+
+
+
+const { title, description, keywords } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {keywords && <meta name="keywords" content={keywords.join(',')} />}
+
+    <meta property="og:title" content={title}>
+    <meta property="og:site_name" content={title}>
+    <meta property="og:url" content={`${import.meta.env.SITE}${import.meta.env.BASE_URL}`}>
+    {description && <meta property="og:description" content={description}>}
+    <meta property="og:type" content="website">
+    <meta property="og:image" content={`${import.meta.env.BASE_URL}opengraph.svg`}>
+  </head>
+  <body>
+    <slot />
+    <script>
+      document.body.style.setProperty('--tilt', `${Math.random() * 360}deg`)
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css?family=Arapey:400i|Raleway:400,800&display=swap');
+
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+  }
+
+  html, body {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html, body {
+      background: hsl(0deg, 50%, 15%);
+      filter: hue-rotate(var(--tilt, 260deg));
+    }
+  }
+
+  @media print {
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    body {
+      padding: 0 .5cm;
+    }
+  }
+</style>

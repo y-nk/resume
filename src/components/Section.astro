@@ -1,0 +1,26 @@
+---
+export type Props = {
+  title?: string
+  class?: string
+}
+
+const { title, class: className } = Astro.props
+---
+<section class:list={className}>
+  {title && <h2 title={title}>{title}</h2>}
+  <slot />
+</section>
+
+<style>
+  section {
+    position: relative;
+    page-break-after: always;
+  }
+
+  section h2 {
+    display: none;
+    margin: 0 0 .75em;
+    font-family: 'Raleway';
+    color: var(--primary);
+  }
+</style>

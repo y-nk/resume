@@ -1,0 +1,62 @@
+---
+import { micromark } from 'micromark'
+
+import Section from '~/components/Section.astro';
+
+const about = `I'm a senior frontend developer, a team leader and a tech advisor in my own field.
+
+During my 15 years of careers I've grown from _UX designer_ to _flash developer_, _frontend developer_, _frontend lead_, _technology advisor_ and now _principal engineer_ slash _solution architect_.
+
+**Where I shine** is in **mentoring** engineers, advising on **keeping complexity low** and concerns separated ; **acting on tech debt** to avoid friction to the growth of a company.
+`
+---
+
+<Section class="about" title="tdlr;">
+  <span is:raw set:html={micromark(about)}></span>
+</Section>
+
+<style is:global>
+  .about {
+    grid-area: about;
+    padding: 1.5em 1em;
+    color: var(--secondary);
+    font-family: 'Arapey', serif;
+    line-height: 1.4;
+    letter-spacing: .05em;
+  }
+
+  .about h2 {
+    display: inline !important;
+    font-size: 1em;
+  }
+
+  .about:hover p > * {
+    color: var(--strong);
+  }
+
+  .about span {
+    font-size: .9em;
+  }
+
+  .about span p {
+    margin-top: calc(1em / .9);
+  }
+
+  .about span p:first-child {
+    display: inline;
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 426px) {
+    .about {
+      padding: 1.5em 2em;
+    }
+  }
+
+  @media screen and (min-width: 768px), print {
+    .about {
+      padding: 2em;
+      background: var(--light);
+    }
+  }
+</style>

@@ -1,0 +1,146 @@
+---
+import { t } from "~/i18n/labels";
+
+import Section from "~/components/Section.astro";
+
+function toPercent(rate: number) {
+  return `${(rate * 100).toFixed(2)}%`
+}
+
+const skillsets = {
+  human: {
+    availability: 0.625,
+    technicity: 0.875,
+    anticipation: 0.75,
+    reactivity: 1,
+  },
+
+  programming: {
+    typescript: 1,
+    javascript: 1,
+    htmlcss: 0.875,
+    actionscript: 1,
+    php: 0.75,
+    cs: 0.625,
+    python: 0.5,
+    java: 0.625,
+    ruby: 0.375,
+    bash: 0.75,
+  },
+
+  machine: {
+    linux: 0.75,
+    docker: 0.5,
+    k8s: 0.5,
+    vms: 0.875,
+    cloud: 0.75,
+    automation: 0.75,
+    adobe: 0.75,
+    sketch: 0.5,
+    figma: 0.75,
+  },
+}
+---
+
+<Section class="skillsets" title={t('skillsets')}>
+  {Object.entries(skillsets).map(([name, skillset]) => (
+    <section class="skillset">
+      <h3>{t(name)}</h3>
+        <dl>
+          {Object.entries(skillset).map(([skill, rate]) => (
+            <dt>{t(skill)}</dt>
+            <dd style={{ '--value': toPercent(rate) }}>{toPercent(rate)}</dd>
+          ))}
+        </dl>
+    </section>
+  ))}
+</Section>
+
+<style>
+  .skillsets {
+    grid-area: skillsets;
+    padding: 2.5em 1.5em;
+    border-top: 1px solid #eaeaea;
+  }
+
+  .skillset + .skillset {
+    margin-top: 1.5em;
+  }
+
+  .skillset {
+    color: var(--primary);
+  }
+
+  .skillset:hover {
+    color: var(--strong);
+  }
+
+  .skillset h3 {
+    margin: 0 0 .5em;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+  }
+
+  .skillset dl {
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-gap: calc(.25em/.9) 0;
+    align-items: center;
+    font-family: 'Arapey', serif;
+    font-size: .9em;
+  }
+
+  .skillset dt {
+    display: flex;
+    margin-right: 1em;
+    color: var(--secondary);
+    white-space: nowrap;
+  }
+
+  .skillset dt:after {
+    flex: 1 1 0%;
+    content: '........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................';
+    width: 1px;
+    padding: 0 .25em;
+    overflow: hidden;
+  }
+
+  .skillset dd {
+    position: relative;
+    text-align: end;
+    display: inline-block;
+    overflow: hidden;
+    width: 6em;
+    height: .5em;
+    border-radius: 1em;
+    text-indent: 9999em;
+  }
+
+  .skillset dd:before,
+  .skillset dd:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    height: inherit;
+    border-radius: inherit;
+    color: inherit;
+  }
+
+  .skillset dd:before {
+    width: 100%;
+    background: var(--light);
+  }
+
+  .skillset dd:after {
+    width: var(--value, 0);
+    background: currentColor;
+  }
+
+  @media screen and (min-width: 768px), print {
+    .skillsets {
+      border: none;
+    }
+  }
+</style>

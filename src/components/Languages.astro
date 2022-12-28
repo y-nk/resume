@@ -1,0 +1,64 @@
+---
+import { cap, t } from '~/i18n/labels';
+
+import Section from '~/components/Section.astro'
+
+const languages = {
+  english: 'Bilingual',
+  french: 'Native',
+  japanese: 'JLPT-N4',
+}
+---
+
+<Section class="languages" title={t('languages')}>
+  <dl>
+    {Object.entries(languages).map(([text, level]) => (
+      <>
+        <dt title={cap(text)}>{t(text)}</dt>
+        <dd>{level}</dd>
+      </>
+    ))}
+  </dl>
+</Section>
+
+<style is:global>
+  .languages {
+    grid-area: languages;
+    padding: 2.5em 1.5em;
+    border-top: 1px solid var(--border);
+  }
+
+  .languages h2 {
+    display: block;
+    margin: 0 0 .5em;
+    color: var(--primary);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+  }
+
+
+  .languages dl {
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-gap: calc(.25em/.9) 0;
+    align-items: center;
+    color: var(--secondary);
+    font-family: 'Arapey', sans-serif;
+    font-size: .9em;
+  }
+
+  .languages dt {
+    display: flex;
+    margin-right: .25em;
+    white-space: nowrap;
+  }
+
+  .languages dt:after {
+    flex: 1 1 0%;
+    content: '........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................';
+    width: 1px;
+    padding: 0 .25em;
+    overflow: hidden;
+    color: var(--light);
+  }
+</style>
