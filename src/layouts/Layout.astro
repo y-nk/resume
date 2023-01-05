@@ -54,7 +54,7 @@ const { title, description, keywords } = Astro.props;
     color: inherit;
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media screen and (prefers-color-scheme: dark) {
     html, body {
       background: hsl(0deg, 50%, 15%);
       filter: hue-rotate(var(--tilt, 260deg));

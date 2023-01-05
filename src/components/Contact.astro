@@ -30,7 +30,7 @@ const currentAge = new Date().getFullYear() - birth.getFullYear()
 <Section class="contact" title={t('contact')}>
   <ul>
     <li>
-      {currentAge}{t('years_old')}, {t('living')} <a href={location.href}>{location.city}</a>
+      {currentAge}{t('years_old')}, {t('living')} <a href={location.href} target="_blank">{location.city}</a>
     </li>
 
     {contact.map(({ href, text }) => (
@@ -60,6 +60,10 @@ const currentAge = new Date().getFullYear() - birth.getFullYear()
   .contact  ul a {
     color: var(--primary);
     text-decoration: none;
+  }
+
+  .contact ul a:hover {
+    color: var(--strong);
   }
 
   @media screen and (min-width: 768px), print {
