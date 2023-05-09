@@ -6,6 +6,7 @@ import Experiences from '~/components/Experiences.astro';
 import About from '~/components/About.astro';
 import Languages from '~/components/Languages.astro';
 // import Skillsets from '~/components/Skillsets.astro';
+import Built from '~/components/Built.astro';
 ---
 
 <Layout
@@ -19,6 +20,7 @@ import Languages from '~/components/Languages.astro';
     <Experiences />
     <Languages />
     {/*<Skillsets />*/}
+    <Built />
   </main>
 </Layout>
 
@@ -44,7 +46,8 @@ Object.entries({ primary, strong }).forEach(([key, val]) => {
         "experiences"
         "about"
         "languages"
-        "skillsets";
+        "skillsets"
+        "built";
 
     grid-template-columns: auto;
     gap: 1em;
@@ -66,12 +69,15 @@ Object.entries({ primary, strong }).forEach(([key, val]) => {
     -webkit-print-color-adjust: exact;
   }
 
-  main :global(a) {
-    text-decoration-style: dotted;
+  main a {
+    color: var(--primary);
+    text-decoration: none;
   }
 
-  main :global(a:hover) {
+  main a:hover {
     color: var(--strong);
+    text-decoration: underline;
+    text-decoration-style: dotted;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -106,10 +112,10 @@ Object.entries({ primary, strong }).forEach(([key, val]) => {
         "header infos"
         "experiences about"
         "experiences languages"
-        "experiences skillsets";
+        "experiences skillsets"
+        "built built";
 
       grid-template-columns: auto minmax(min-content, 28%);
-      grid-template-rows: repeat(min-content, 10);
       grid-gap: 0 1.5em;
       align-content: start;
     }

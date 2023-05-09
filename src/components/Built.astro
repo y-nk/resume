@@ -1,0 +1,21 @@
+<aside class="built">
+  this page has been built fluid, responsive, and printable. there's also multiple color schemes and dark mode.
+</aside>
+
+<style is:global>
+  .built {
+    grid-area: built;
+    display: none;
+    text-align: center;
+    color: var(--emphasis);
+    font-size: .6em;
+    font-family: sans-serif;
+  }
+
+  @media screen and (min-width: 768px) {
+    .built {
+      display: block;
+      margin-top: 1em
+    }
+  }
+</style>
